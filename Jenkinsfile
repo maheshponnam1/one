@@ -1,6 +1,6 @@
 pipeline {
     agent any
-toos{
+tools{
 maven 'maven 3.9.9'
 }
 
