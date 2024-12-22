@@ -8,7 +8,7 @@ maven 'maven 3.9.9'
         stage('Checkout') {
             steps {
                 echo 'Checking out code...'
-                git branch: 'master', url: 'https://github.com/maheshponnam1/one.git'
+                git 'https://github.com/maheshponnam1/one.git'
             }
         }
 
