@@ -31,5 +31,13 @@ maven 'maven 3.9.9'
                 sh 'mvn deploy'
             }
         }
+        stage('deploy to tomcat'){
+            steps{
+                sshagent(['3b3f05e1-7e79-4a72-8bac-3f1bddf03262']) {
+                    sh "scp -o StrictHostKeyChecking=no target/myweb-8.5.5.war ec2-user@34.228.6.20:/opt/apache-tomcat-9.0.98/webapps"
+    // some block
+}
+            }
+        }
     }
 }
