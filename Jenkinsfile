@@ -26,5 +26,10 @@ maven 'maven 3.9.9'
                 sh 'mvn sonar:sonar'
             }
         }
+        stage('deploy to nexus'){
+            steps{
+                sh 'mvn deploy'
+            }
+        }
     }
 }
